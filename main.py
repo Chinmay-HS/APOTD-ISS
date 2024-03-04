@@ -5,11 +5,11 @@ import os
 
 # Function to open APOD module
 def open_apod():
-    os.system(f"python3 /Volumes/Volume/Balthasar/CO6I/PWP_22616/Stuff/Microproject/apod.py")
+    os.system(r"C:\\Users\TIAT\Downloads\APOTD-ISS-main\APOTD-ISS-main\apod.py")
 
 # Function to open ISS tracking module
 def open_iss():
-    os.system(f"python3 /Volumes/Volume/Balthasar/CO6I/PWP_22616/Stuff/Microproject/iss.py")
+    os.system(f"C:\\Users\TIAT\Downloads\APOTD-ISS-main\APOTD-ISS-main\iss.py")
 
 # Create main window
 root = tk.Tk()
@@ -17,7 +17,7 @@ root.title("Group 26 PWP Microproject")
 root.geometry("900x600")
 
 # Load and display background image
-bg_image_path = "/Volumes/Volume/Balthasar/CO6I/PWP_22616/Stuff/Microproject/bgimage.jpg"  # Replace with your image path
+bg_image_path = r"C:\\Users\TIAT\Downloads\APOTD-ISS-main\APOTD-ISS-main\imagebg.jpg"  # Replace with your image path
 if os.path.exists(bg_image_path):
     background_image = Image.open(bg_image_path)
     background_photo = ImageTk.PhotoImage(background_image)
