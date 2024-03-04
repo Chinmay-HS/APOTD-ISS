@@ -28,7 +28,7 @@ def fetch_iss_location():
     x, y = lon_to_pixel(lon), lat_to_pixel(lat)
     canvas.coords(iss_icon, x - 15, y - 15)  # Adjust icon size if needed
 
-    # Refresh
+    # Refresh``
     root.after(5000, fetch_iss_location)  # Call the function every 5000 milliseconds (5 seconds)
 
 def lon_to_pixel(lon):
@@ -53,12 +53,12 @@ canvas = tk.Canvas(root, width=1280, height=720)
 canvas.pack()
 
 # Load the world map image
-map_image_path = "/Volumes/Volume/Balthasar/CO6I/PWP_22616/Stuff/Microproject/map2.gif"  # Replace with the actual path to your image file
+map_image_path = "C:\\Users\TIAT\Downloads\APOTD-ISS-main\APOTD-ISS-main\map2.gif"  # Replace with the actual path to your image file
 map_image = tk.PhotoImage(file=map_image_path)
 canvas.create_image(0, 0, anchor=tk.NW, image=map_image)
 
 # Load the ISS icon
-iss_icon_path = "/Volumes/Volume/Balthasar/CO6I/PWP_22616/Stuff/Microproject/iss_icon2.gif"  # Replace with the actual path to your image file
+iss_icon_path = "C:\\Users\TIAT\Downloads\APOTD-ISS-main\APOTD-ISS-main\iss_icon2.gif"  # Replace with the actual path to your image file
 iss_icon_image = tk.PhotoImage(file=iss_icon_path)
 iss_icon = canvas.create_image(0, 0, anchor=tk.CENTER, image=iss_icon_image)
 

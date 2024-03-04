@@ -31,6 +31,8 @@ def display_image_from_url(image_url):
 
         root.mainloop()
     else:
+        print("Invalid APOD response or not an image type.")
+
 
 def fetch_and_display_apod():
     selected_date = date_var.get()
@@ -66,8 +68,8 @@ def display_info(apod_response):
     explanation_text.insert(tk.END, f"Explanation: {apod_response['explanation']}")
     explanation_text.config(state=tk.DISABLED)
 
-    copyright_label = ttk.Label(info_frame, text=f"Copyright: {apod_response['copyright']}", font=('DM Sans', 10))
-    copyright_label.grid(row=4, column=0, padx=10, pady=5, sticky="W")
+    # copyright_label = ttk.Label(info_frame, text=f"Copyright: {apod_response['copyright']}", font=('DM Sans', 10))
+    # copyright_label.grid(row=4, column=0, padx=10, pady=5, sticky="W")
 
     # Button to display image from the URL
     display_button = ttk.Button(info_frame, text="Display Image", command=lambda: display_image_from_url(apod_response['url']))
